@@ -14,13 +14,19 @@
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<script src="js/modernizr.custom.js"></script>
         <script src="js/popcorn-complete.js"></script>
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script type="text/javascript">
+            // This identifies your website in the createToken call below
+                Stripe.setPublishableKey('pk_test_RBTTwICQQRbYBW3L8txUJjLk');
+            // ...
+        </script>
 	</head>
 	<body>
 		<div class="container demo-4">
 			<!-- Top Navigation -->
 			<div class="codrops-top clearfix">
-				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/PageLoadingEffects/"><span>Previous Demo</span></a>
-				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19004"><span>Back to the Codrops Article</span></a></span>
+				<a class="codrops-icon codrops-icon-prev" href="http://www.thedailyplanet.org"><span>Back to The Daily Planet</span></a>
+				
 			</div>
 			<header class="codrops-header">
 				<h1>The Daily Planet</h1>
