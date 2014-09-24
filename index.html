@@ -26,32 +26,45 @@
 			<header class="codrops-header">
 				<h1>The Daily Planet</h1>
 				<p>Offers comprehensive and integrated healthcare to those who are homeless, or at risk of homelessness.</p>
-				<nav class="codrops-demos">
-					<a class="current-demo" href="#">Primary</a>
-					<a href="#">Behavioral</a>
-					<a href="#">Dental</a>
-					<a  href="#">Eye</a>
-				</nav>
-			</header>
-			<section>
-				<div class="page-content">
-					<p>It only takes $60 to help someone see a primary care doctor.</p>
-                    <form action="/charge" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_RBTTwICQQRbYBW3L8txUJjLk"
-    data-image="/square-image.png"
-    data-name="Demo Site"
-    data-description="2 widgets ($20.00)"
-    data-amount="2000">
-  </script>
-</form>
-					
-				</div>
-			</section>
-			<section class="related">
-				
-			</section>
+				</header>
+		<section>
+            <script src="https://checkout.stripe.com/checkout.js"></script>
+
+<button id="customButton">Donate $20</button>
+            <button id="customButton2">Donate $30</button>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_RBTTwICQQRbYBW3L8txUJjLk',
+    image: '/square-image.png',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+  document.getElementById('customButton').addEventListener('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '2 widgets ($20.00)',
+      amount: 2000
+    });
+    e.preventDefault();
+  });
+    
+    document.getElementById('customButton2').addEventListener('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '2 widgets (30.00)',
+      amount: 3000
+    });
+    e.preventDefault();
+  });
+</script>
+        
+            </section>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
 		<script src="js/uiMorphingButton_inflow.js"></script>
