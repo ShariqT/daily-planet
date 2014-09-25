@@ -411,12 +411,15 @@ overflow: hidden;
 @media  (max-width: 480px) {
 	#customButton {
         line-height: 60px;
+        font-size: 90%;
 	}
     #customButton2 {
         line-height: 60px;
+        font-size: 90%;
 	}
     #customButton3 {
         line-height: 60px;
+        font-size: 90%;
 	}
 }
 
