@@ -39,7 +39,7 @@
 </div>
 <script>
   var handler = StripeCheckout.configure({
-    key: 'pk_live_v6HBdlhBGu1Wt80catVekBgO',
+    key: 'pk_test_RBTTwICQQRbYBW3L8txUJjLk ',
     image: 'img/square-image.png',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
@@ -50,10 +50,7 @@
   document.getElementById('customButton').addEventListener('click', function(e) {
     popcorn.play();
         
-    popcorn.cue( 1, function() {
-  // log count, which is 0 by default
-  console.log( count );
-});
+ 
 
 // Another example with some more functionality included
 
@@ -73,13 +70,10 @@ popcorn.cue( 8, function() {
   });
     
     document.getElementById('customButton2').addEventListener('click', function(e) {
-     popcorn.play();
+     
+        popcorn.play();
         
-    popcorn.cue( 1, function() {
-  // log count, which is 0 by default
-  console.log( count );
-});
-
+   
 // Another example with some more functionality included
 
 popcorn.cue( 15, function() {
