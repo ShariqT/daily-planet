@@ -480,6 +480,31 @@ overflow: hidden;
 	text-align: left;
 }
 
+
+.logo {
+    position: relative;
+    margin: 0px auto;
+
+}
+
+
+
+
+.mobile-image { 
+     position: relative;
+     margin-top: 0px;
+     left: 0px;
+     width: 100%;
+     height: auto;
+     z-index: 1000;
+     overflow: hidden;
+     display:none;
+}
+@media  (max-width: 480px) {
+	.mobile-image {display: block;
+	}
+}
+
 #videobcg { 
      position: fixed;
      bottom: 0px;
