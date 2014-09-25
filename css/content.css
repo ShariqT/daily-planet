@@ -358,6 +358,53 @@
 	transform: rotateY(0deg);
 }
 
+.button-holder {
+margin: 0 auto;
+    text-align: center;
+
+}
+
+#customButton {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+
+#customButton2 {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+#customButton3 {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+
 .morph-button.open .content-style-form-4 p:nth-child(2) {
 	-webkit-transition-delay: 0.35s;
 	transition-delay: 0.35s;
@@ -433,6 +480,19 @@
 	text-align: left;
 }
 
+#videobcg { 
+     position: fixed;
+     bottom: 0px;
+     left: 0px;
+     width: 100%;
+     height: auto;
+     z-index: 1000;
+     overflow: hidden;
+}
+@media  (max-width: 480px) {
+	#videobcg {display: none;
+	}
+}
 .video-mockup {
 	width: 640px;
 	height: 360px;

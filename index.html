@@ -17,8 +17,10 @@
 
 	</head>
 	<body>
+        
 		<div class="container demo-4">
-			<!-- Top Navigation -->
+			
+            <!-- Top Navigation -->
 			<div class="codrops-top clearfix">
 				<a class="codrops-icon codrops-icon-prev" href="http://www.thedailyplanet.org"><span>Back to The Daily Planet</span></a>
 				
@@ -27,16 +29,17 @@
 				<h1>The Daily Planet</h1>
 				<p>Offers comprehensive and integrated healthcare to those who are homeless, or at risk of homelessness.</p>
 				</header>
-		<section>
+		<div class="button-holder">
             <script src="https://checkout.stripe.com/checkout.js"></script>
 
-<button id="customButton">Donate $20</button>
+            <button id="customButton">Donate $15</button>
             <button id="customButton2">Donate $30</button>
+            <button id="customButton3">Donate $60</button>
 
 <script>
   var handler = StripeCheckout.configure({
-    key: 'pk_test_RBTTwICQQRbYBW3L8txUJjLk',
-    image: '/square-image.png',
+    key: 'pk_live_v6HBdlhBGu1Wt80catVekBgO',
+    image: 'img/square-image.png',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
       // You can access the token ID with `token.id`
@@ -47,8 +50,8 @@
     // Open Checkout with further options
     handler.open({
       name: 'The Daily Planet',
-      description: '2 widgets ($20.00)',
-      amount: 2000
+      description: '1/4 of a Visit ($15.00)',
+      amount: 1500
     });
     e.preventDefault();
   });
@@ -57,26 +60,29 @@
     // Open Checkout with further options
     handler.open({
       name: 'The Daily Planet',
-      description: '2 widgets (30.00)',
+      description: '1/2 of a Visit (30.00)',
       amount: 3000
+    });
+    e.preventDefault();
+  });
+    
+      document.getElementById('customButton3').addEventListener('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '1 Full Visit (60.00)',
+      amount: 6000
     });
     e.preventDefault();
   });
 </script>
         
-            </section>
-		</div><!-- /container -->
-		<script src="js/classie.js"></script>
-		<script src="js/uiMorphingButton_inflow.js"></script>
-		<script>
-			(function() {
-				new UIMorphingButton( document.querySelector( '.morph-button' ) );
-
-				// for demo purposes only
-				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
-					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-				} );
-			})();
-		</script>
+		
+        </div><!-- /container -->
+		<video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="video/test1.mp4" type="video/mp4">
+            <source src="video/test1.webm" type="video/webm">
+          Sorry, your browser does not support HTML5 video.
+            </video>
 	</body>
 </html>

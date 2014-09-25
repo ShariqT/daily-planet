@@ -27,16 +27,18 @@
 
 body {
 	position: relative;
-	background: #5f545a;
+	background: #fff;
 	color: #faf1e0;
 	font-size: 100%;
 	line-height: 1.25;
 	font-weight: 300;
 	font-family: 'Lato', Arial, sans-serif;
+    height: auto;
 }
 
 .container {
 	background: #67c2d4;
+    min-height: 100%;
 }
 
 a, button {
