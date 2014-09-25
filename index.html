@@ -36,7 +36,7 @@
             <button id="customButton">Donate $15</button>
             <button id="customButton2">Donate $30</button>
             <button id="customButton3">Donate $60</button>
-
+</div>
 <script>
   var handler = StripeCheckout.configure({
     key: 'pk_live_v6HBdlhBGu1Wt80catVekBgO',
@@ -48,7 +48,22 @@
   });
 
   document.getElementById('customButton').addEventListener('click', function(e) {
-    // Open Checkout with further options
+    popcorn.play();
+        
+    popcorn.cue( 1, function() {
+  // log count, which is 0 by default
+  console.log( count );
+});
+
+// Another example with some more functionality included
+
+popcorn.cue( 8, function() {
+  //set current time to 1 and increase a simple counter
+  count++;
+  this.currentTime( 5 );
+}); 
+      
+      // Open Checkout with further options
     handler.open({
       name: 'The Daily Planet',
       description: '1/4 of a Visit ($15.00)',
@@ -58,6 +73,20 @@
   });
     
     document.getElementById('customButton2').addEventListener('click', function(e) {
+     popcorn.play();
+        
+    popcorn.cue( 1, function() {
+  // log count, which is 0 by default
+  console.log( count );
+});
+
+// Another example with some more functionality included
+
+popcorn.cue( 15, function() {
+  //set current time to 1 and increase a simple counter
+  count++;
+  this.currentTime( 12 );
+});    
     // Open Checkout with further options
     handler.open({
       name: 'The Daily Planet',
@@ -68,7 +97,9 @@
   });
     
       document.getElementById('customButton3').addEventListener('click', function(e) {
-    // Open Checkout with further options
+    popcorn.play();
+          
+          // Open Checkout with further options
     handler.open({
       name: 'The Daily Planet',
       description: '1 Full Visit (60.00)',
@@ -80,11 +111,34 @@
         
 		
         </div><!-- /container -->
-		<video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+		<video id="videobcg" preload="auto"   muted="muted" volume="0">
             <source src="video/test1.mp4" type="video/mp4">
             <source src="video/test1.webm" type="video/webm">
           Sorry, your browser does not support HTML5 video.
             </video>
             <img src="img/6274886.jpg" class="mobile-image">
+            
+            <script>
+            var popcorn = Popcorn( "#videobcg" ),
+    count = 0;
+
+//  an exec block would look like this:
+//  popcorn.exec( 1, function() {
+//    console.log( "Exec ran" );
+//  });
+
+// cue is almost identical
+
+
+
+// Play our video
+popcorn.stop();
+
+// This demo will log our current time at 1 second and seek back to 1 second in the video at
+// 3 seconds and increase our counter
+            
+            
+            </script>
+            
 	</body>
 </html>

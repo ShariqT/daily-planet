@@ -36,9 +36,16 @@ body {
     height: auto;
 }
 
+@media  (max-width: 480px) {
+	body {
+        font-size: 75%;
+	}
+}
+
 .container {
 	background: #67c2d4;
     min-height: 100%;
+    z-index: 1000;
 }
 
 a, button {
