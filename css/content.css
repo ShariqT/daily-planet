@@ -421,6 +421,47 @@ overflow: hidden;
 
 }
 
+#customButton4 {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+
+#customButton5 {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+#customButton6 {
+position: relative;
+padding: 0 1em;
+border: none;
+background-color: #e85657;
+color: #f9f6e5;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+line-height: 80px;
+overflow: hidden;
+
+}
+
 @media  (max-width: 480px) {
 	#customButton {
         line-height: 60px;
@@ -431,6 +472,18 @@ overflow: hidden;
         font-size: 90%;
 	}
     #customButton3 {
+        line-height: 60px;
+        font-size: 90%;
+	}
+    #customButton4 {
+        line-height: 60px;
+        font-size: 90%;
+	}
+    #customButton5 {
+        line-height: 60px;
+        font-size: 90%;
+	}
+    #customButton6 {
         line-height: 60px;
         font-size: 90%;
 	}
