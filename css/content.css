@@ -364,6 +364,9 @@ margin: 0 auto;
 
 }
 
+
+
+
 #customButton {
 position: relative;
 padding: 0 1em;
@@ -372,7 +375,7 @@ background-color: #e85657;
 color: #f9f6e5;
 text-transform: uppercase;
 letter-spacing: 1px;
-font-weight: 700;
+font-weight: 350;
 line-height: 80px;
 overflow: hidden;
 
@@ -404,6 +407,19 @@ line-height: 80px;
 overflow: hidden;
 
 }
+
+@media  (max-width: 480px) {
+	#customButton {
+        line-height: 60px;
+	}
+    #customButton2 {
+        line-height: 60px;
+	}
+    #customButton3 {
+        line-height: 60px;
+	}
+}
+
 
 .morph-button.open .content-style-form-4 p:nth-child(2) {
 	-webkit-transition-delay: 0.35s;
@@ -492,7 +508,8 @@ overflow: hidden;
 
 .mobile-image { 
      position: relative;
-     margin-top: 0px;
+    padding-top: 40px; 
+    margin-top: 0px;
      left: 0px;
      width: 100%;
      height: auto;
@@ -511,7 +528,7 @@ overflow: hidden;
      left: 0px;
      width: 100%;
      height: auto;
-     z-index: 1000;
+     z-index: -1;
      overflow: hidden;
 }
 @media  (max-width: 480px) {
