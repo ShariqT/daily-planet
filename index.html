@@ -37,6 +37,13 @@
             <button id="customButton2">Donate $30</button>
             <button id="customButton3">Donate $60</button>
 </div>
+            		<div class="button-holder2">
+           
+
+            <button id="customButton4">Donate $15</button>
+            <button id="customButton5">Donate $30</button>
+            <button id="customButton6">Donate $60</button>
+</div>
 <script>
   var handler = StripeCheckout.configure({
     key: 'pk_test_avdmXA2V9FdASuufKiJlPR7W',
@@ -101,6 +108,50 @@ popcorn.cue( 15, function() {
     });
     e.preventDefault();
   });
+    
+    
+    document.getElementById('customButton4').addEventListener('click', function(e) {
+
+      
+      // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '1/4 of a Visit ($15.00)',
+      amount: 1500
+    });
+    e.preventDefault();
+  });
+    
+    document.getElementById('customButton5').addEventListener('click', function(e) {
+   
+    // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '1/2 of a Visit (30.00)',
+      amount: 3000
+    });
+    e.preventDefault();
+  });
+    
+      document.getElementById('customButton6').addEventListener('click', function(e) {
+    popcorn.play();
+          
+          // Open Checkout with further options
+    handler.open({
+      name: 'The Daily Planet',
+      description: '1 Full Visit (60.00)',
+      amount: 6000
+    });
+    e.preventDefault();
+  });
+    
+    
+    
+    
+    
+    
+    
+    
 </script>
         
 		

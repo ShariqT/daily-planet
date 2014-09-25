@@ -359,12 +359,25 @@
 }
 
 .button-holder {
-margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
-
+    display: block;
 }
 
+.button-holder2 {
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
 
+@media  (max-width: 480px) {
+	.button-holder {
+        display: none;
+	}
+    .button-holder2 {
+        display: block;
+	}
+}
 
 
 #customButton {
